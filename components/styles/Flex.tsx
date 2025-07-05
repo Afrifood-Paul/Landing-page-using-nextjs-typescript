@@ -7,7 +7,7 @@ type FlexProps = {
 }
 const Flex = ({ css, children, classNames }: FlexProps) => {
     return (
-        <section className={`flex flex-row items-center justify-between ${classNames}`} style={css}>
+        <section className={`flex flex-col md:flex-row items-center justify-between ${classNames}`} style={css}>
             {children}
         </section>
     )

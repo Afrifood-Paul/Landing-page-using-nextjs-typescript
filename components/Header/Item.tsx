@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { ReactNode, useCallback, useState } from 'react'
+import React, { ReactNode, } from 'react'
 
 type ItemProps = {
     children?: ReactNode,
