@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  transition: all linear 0.2s;
+}
+
+body {
+  background: hsla(26, 28%, 95%, 1);
+}
+
+.header {
+  @apply border-b-2 fixed right-0 top-0 left-0 w-full px-4 bg-white py-3;
+}
+
+.nav-flex {
+  @apply flex flex-col md:flex-row items-center justify-between capitalize relative md:space-x-7 space-y-4 md:space-y-0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-properties {
+  @apply absolute top-[-1000px] text-left flex flex-col items-start gap-4;
+  padding: 5px 10px;
+  border-radius: 9px;
+  font-size: 14px;
+  background: hsla(215, 29%, 86%, 1);
+  width: 50%;
+}
+
+.nav-flex li:hover > .nav-properties {
+  @apply top-7 transition-all;
+}
+
+.nav-flex li:active > .nav-properties {
+  display: block;
+}
+
+.active_nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active_nav::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  width: calc(100%);
+  height: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(24, 84%, 54%, 1);
+  border-radius: 10px;
+}
+
+/*  BUTTON STYLES */
+
+.button {
+  @apply flex justify-center items-center border-2 border-solid p-2;
+  border-radius: 15px;
+  border-color: hsla(24, 84%, 54%, 1);
+}
+
+.button:hover {
+  @apply transition-all duration-75 scale-50;
+  transform: scale(0.9);
+  transition: scale 0.3s linear;
+}
+
+.blur-bg {
+  width: 100%;
+  height: 150px;
+  background-color: gray;
+  backdrop-filter: blur(50px);
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next {
+  background-image: url("/images/arrow-right.png");
+  right: 0;
+}
+
+.swiper-button-prev {
+  background-image: url("/images/arrow-left.png");
+  left: 0;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.stars svg {
+  color: hsla(37, 92%, 64%, 1);
+}
+
+.footer {
+  background: hsla(24, 73%, 11%, 1);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-left;
+  column-gap: 10px;
+  padding: 4px;
+  margin-top: 14px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  background-color: hsla(215, 81%, 96%, 1);
+}
+
+.progress button {
+  @apply bg-blue;
+  padding: 4px;
+  color: white;
+  border-radius: 4px;
+  /* background: ; */
+}
+
+.progress .progress-width {
+  width: 50px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  margin: 0 3px;
+  border-radius: 50px;
+}
+
+.progress .progress-width::before {
+  @apply bg-blue;
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.progress button svg {
+  font-size: 20px;
+  color: white;
+}
+
+.plancard {
+  border-radius: 10px;
+}
+
+.plancard1 {
+  background-color: hsla(215, 29%, 54%, 1);
+  border-bottom-left-radius: 50px;
+}
+
+.plancard2 {
+  background: linear-gradient(287.56deg, #ec7425 -2.19%, #173a6c 67.17%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 50px;
+}
+
+.plancard3 {
+  background: hsla(215, 65%, 25%, 1);
+  border-bottom-right-radius: 50px;
+}
